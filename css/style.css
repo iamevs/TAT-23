@@ -13,6 +13,7 @@ body {
   background: #fff;
   color: #2f3138;
   font-family: "Open Sans", sans-serif;
+  overflow-x: hidden;
 }
 
 a {
@@ -71,16 +72,16 @@ h6 {
 
 .back-to-top {
   position: fixed;
-  display: none;
   background: #f82249;
   color: #fff;
   width: 40px;
   height: 40px;
   text-align: center;
   border-radius: 50px;
-  right: 15px;
-  bottom: 15px;
   transition: background 0.5s ease-in-out;
+  display: flex;
+  right: 120px;
+  justify-content: center;
 }
 
 .back-to-top i {
@@ -147,12 +148,14 @@ h6 {
 #header {
   height: 90px;
   padding: 25px 0;
-  position: fixed;
+  /* position: fixed;
   left: 0;
   top: 0;
-  right: 0;
+  right: 0; */
+  position: relative;
   transition: all 0.5s;
   z-index: 997;
+  background: rgba(6, 12, 34, 0.98);
 }
 
 #header.header-scrolled,
@@ -358,7 +361,7 @@ h6 {
 
 #mobile-nav-toggle {
   position: fixed;
-  right: 0;
+  right:0;
   top: 0;
   z-index: 999;
   margin: 15px 15px 0 0;
@@ -369,10 +372,12 @@ h6 {
   transition: all 0.4s;
   outline: none;
   cursor: pointer;
+  backdrop-filter: blur(70px);
 }
 
 #mobile-nav-toggle i {
-  color: #fff;
+  color: #f82249;
+  /* color: #fff; */
 }
 
 /* Mobile Nav Styling */
@@ -1396,6 +1401,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding: 0 0 25px 0;
   color: #eee;
   font-size: 14px;
+  width: 100%;
 }
 
 #footer .footer-top {
